@@ -11,6 +11,6 @@ func main() {
 	fmt.Print("Área em m²: ")
 	fmt.Scan(&area)
 	latas = int(math.Ceil(area / 3 / 18))
-	preco := latas * 80.0
+	preco := float64(latas) * 80.0
 	fmt.Printf("São necessárias %d latas. Total: R$%1.2f \n", latas, preco)
 }
