@@ -15,15 +15,10 @@ func main() {
 	switch tipo {
 	case 1:
 		valorAPagar = valor
-		break
 	case 2:
 		valorAPagar = valor - valor*0.1
-		break
 	case 3:
 		valorAPagar = valor - valor*0.05
-		break
-	default:
-		valorAPagar = 0
 	}
 	fmt.Printf("Valor a pagar: %1.2f\n", valorAPagar)
 }

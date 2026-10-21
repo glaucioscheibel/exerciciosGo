@@ -266,29 +266,31 @@
    pensando. A cada _chute_ que o programa der, o usuário deverá responder se ele acertou, se o valor foi acima ou
    abaixo do pensado. Caso o programa acerte em até 10 tentativas, o programa será considerado vitorioso.
 
-1. O seguinte programa em Python&trade; não está funcionando e lhe foi pedido para ser corrigido. Apenas olhando o
+1. O seguinte programa em Go&trade; não está funcionando e lhe foi pedido para ser corrigido. Apenas olhando o
    código, qual foi o erro de programação?
 
-    ```python
-    cont1 = 0
-    cont2 = 0
-    brancos = 0
-    nulos = 0
-    voto = int(input())
-    while voto != -1:
-        if voto == 1:
-            cont1 += 1
-        elif voto == 2:
-            cont2 += 1
-        elif voto == 0:
-            brancos += 1
-        else:
-            nulos += 1
-    print(cont1)
-    print(cont2)
-    print(brancos)
-    print(nulos)
-    ```
+   ```go
+   func main() {
+      var cont1, cont2, brancos, nulos, voto int
+      fmt.Scan(&voto)
+      for voto != -1 {
+         switch voto {
+         case 1:
+            cont1++
+         case 2:
+            cont2++
+         case 0:
+            brancos++
+         default:
+            nulos++
+         }
+      }
+      fmt.Println(cont1)
+      fmt.Println(cont2)
+      fmt.Println(brancos)
+      fmt.Println(nulos)
+   }
+   ```
 
 ## _Strings_
 
@@ -385,8 +387,8 @@
 1. Uma escola de samba recebeu como pontos pela alegoria os seguintes 5 valores inclusos no vetor Notas. Lembrando que a
    nota mais alta e a nota mais baixa são descartadas. Faça um programa que calcule a média final do quesito.
 
-    ```python
-    Notas = [9.9, 9.7, 9.8, 10, 10]
+    ```go
+    notas := [5]int[9.9, 9.7, 9.8, 10, 10]
     ```
 
 1. Dadas duas sequências com _n_ números inteiros entre 0 e 9, interpretadas como dois números inteiros de _n_
@@ -791,7 +793,6 @@
 - **Go** is a registered trademark of Google.
 - **Java** is a registered trademark of Oracle.
 - **MongoDB** is a registered trademark of MongoDB Inc.
-- **Python** is a trademark of the Python Software Foundation.
 - **Redis** is a registered trademark of Redis Ltd.
 - **Visual Studio Code** and **VS Code** are trademarks of Microsoft Corporation.
 

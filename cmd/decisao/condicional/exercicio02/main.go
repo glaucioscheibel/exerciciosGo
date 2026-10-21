@@ -17,16 +17,12 @@ func main() {
 	switch operacao {
 	case "+":
 		resultado = val1 + val2
-		break
 	case "-":
 		resultado = val1 - val2
-		break
 	case "*":
 		resultado = val1 * val2
-		break
 	case "/":
 		resultado = val1 / val2
-		break
 	}
 	fmt.Printf("%d %s %d = %d\n", val1, operacao, val2, resultado)
 }
