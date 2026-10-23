@@ -12,5 +12,4 @@ func main() {
 		paisB += int(float64(paisB) * 0.015)
 	}
 	fmt.Printf("O país A leva %d anos para ultrapassar o país B.\n", anos)
-
 }

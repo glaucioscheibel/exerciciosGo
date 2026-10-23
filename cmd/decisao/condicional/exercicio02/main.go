@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var val1 int
 	var val2 int
-	var resultado = 0
+	resultado := 0
 	var operacao string
 	fmt.Print("Valor1: ")
 	fmt.Scan(&val1)

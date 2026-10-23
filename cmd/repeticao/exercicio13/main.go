@@ -14,7 +14,7 @@ func main() {
 	}
 	fmt.Printf("Total de grãos: %d\n", total)
 
-	//Versão alternativa:
+	// Versão alternativa:
 	total2 := big.NewInt(0)
 	total2.Exp(big.NewInt(2), big.NewInt(64), nil)
 	total2.Sub(total2, big.NewInt(1))
