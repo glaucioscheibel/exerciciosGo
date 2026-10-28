@@ -16,7 +16,8 @@ func main() {
 		} else {
 			if numeros[i] > maior {
 				maior = numeros[i]
-			} else {
+			}
+			if numeros[i] < menor {
 				menor = numeros[i]
 			}
 		}
