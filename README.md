@@ -15,10 +15,6 @@
 1. [NoSQL Chave-Valor](#nosql-chave-valor)
 1. [NoSQL Documento](#nosql-documento)
     1. [ODM](#nosql-documento-odm)
-1. [Filmes](#filmes)
-1. [Livros](#livros)
-1. [Palestras](#palestras)
-1. [Agradecimentos](#agradecimentos)
 1. [Informações legais](#informações-legais)
 
 ## Estrutura sequencial
@@ -270,6 +266,10 @@
    código, qual foi o erro de programação?
 
    ```go
+   package main
+
+   import "fmt"
+
    func main() {
       var cont1, cont2, brancos, nulos, voto int
       fmt.Scan(&voto)
@@ -595,9 +595,9 @@
 
 ## Programação concorrente
 
-1. Faça um programa concorrente que crie 10 _threads_ que exibam o nome da _thread_ e a hora atual.
+1. Faça um programa concorrente que crie 10 _goroutines_ que exibam a hora atual.
 
-1. Faça um programa concorrente que crie 10 _threads_ que exibam o nome da _thread_ e um contador que varia de 1 a 10.
+1. Faça um programa concorrente que crie 10 _goroutines_ que exibam um nome e um contador que varia de 1 a 10.
    Execute várias vezes e observe as variações na saída. Os valores são sempre impressos na mesma ordem? Qual a causa
    desta diferença?
 
