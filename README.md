@@ -366,8 +366,8 @@
     - A &minus; B: Diferença (apenas valores que não apareçam simultaneamente em ambos conjuntos)
 
 1. Escrever um programa que lê um vetor com 20 números inteiros e os imprime na tela. Troque, a seguir, o 1&ordm;
-   elemento com o último, o 2&ordm; com o penúltimo, etc. até o 10&ordm; com o 11&ordm; e imprima na tela o vetor N assim
-   modificado.
+   elemento com o último, o 2&ordm; com o penúltimo, etc. até o 10&ordm; com o 11&ordm; e imprima na tela o vetor N
+   assim modificado.
 
 1. Ler 100 números de matrículas de alunos e armazenar em um vetor. Esses números são distintos, ou seja, não existem
    números de matrículas iguais. Caso o usuário informa um número de matrículo que já existe, o programa deverá emitir
@@ -603,16 +603,14 @@
 
 1. Faça um programa que gere um array de 1 bilhão de números inteiros aleatórios e faça as seguintes tarefas:
     1. Some todos os valores de forma sequencial e meça o tempo de execução;
-    1. Some todos os valores de forma concorrente com 10 _threads_ e meça o tempo de execução;
-    1. Some todos os valores de forma concorrente com 100 _threads_ e meça o tempo de execução.
-    1. Some todos os valores de forma concorrente com a quantidade de _threads_ igual à quantidade de núcleos no sistema
+    1. Some todos os valores de forma concorrente com 10 _GoRoutines_ e meça o tempo de execução;
+    1. Some todos os valores de forma concorrente com 100 _GoRoutines_ e meça o tempo de execução.
+    1. Some todos os valores de forma concorrente com a quantidade de _GoRoutines_ igual à quantidade de núcleos no
+       sistema
        operacional e meça o tempo de execução.
     1. Responda as seguintes perguntas:
         1. Qual foi o _speedup_[^1] obtido?
         1. Teve algum caso que o _speedup_ foi negativo?
-    1. Repita os testes acima usando _Threads_ virtuais.
-        1. Houve diferenças entre _Threads_ de plataforma e _Threads_ virtuais? Se houve, quais foram e explique o
-           porquê das diferenças.
 
 1. Faça um programa que crie uma lista (_ArrayList_) e manipule ela com as seguintes _threads_:
     - Duas _threads_ incluindo valores aleatórios na lista.
