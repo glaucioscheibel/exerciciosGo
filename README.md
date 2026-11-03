@@ -603,19 +603,19 @@
 
 1. Faça um programa que gere um array de 1 bilhão de números inteiros aleatórios e faça as seguintes tarefas:
     1. Some todos os valores de forma sequencial e meça o tempo de execução;
-    1. Some todos os valores de forma concorrente com 10 _GoRoutines_ e meça o tempo de execução;
-    1. Some todos os valores de forma concorrente com 100 _GoRoutines_ e meça o tempo de execução.
-    1. Some todos os valores de forma concorrente com a quantidade de _GoRoutines_ igual à quantidade de núcleos no
+    1. Some todos os valores de forma concorrente com 10 _goroutines_ e meça o tempo de execução;
+    1. Some todos os valores de forma concorrente com 100 _goroutines_ e meça o tempo de execução.
+    1. Some todos os valores de forma concorrente com a quantidade de _goroutines_ igual à quantidade de núcleos no
        sistema
        operacional e meça o tempo de execução.
     1. Responda as seguintes perguntas:
         1. Qual foi o _speedup_[^1] obtido?
         1. Teve algum caso que o _speedup_ foi negativo?
 
-1. Faça um programa que crie uma lista (_ArrayList_) e manipule ela com as seguintes _threads_:
-    - Duas _threads_ incluindo valores aleatórios na lista.
-    - Uma _thread_ removendo o primeiro valor da lista.
-    - Uma _thread_ imprimindo a cada segundo os valores existentes.
+1. Faça um programa que crie uma lista (_slice_) e manipule ela com as seguintes _goroutines_:
+    - Duas _goroutines_ incluindo valores aleatórios na lista.
+    - Uma _goroutine_ removendo o primeiro valor da lista.
+    - Uma _goroutine_ imprimindo a cada segundo os valores existentes.
 
 1. O banco Firmeza desenvolveu um sistema de contas e saldos bancários e lhe contratou para executar um teste de
    desempenho para avaliar a robusteza e a quantidade de transações possíveis de serem processadas por 3 minutos. Para
@@ -626,22 +626,10 @@
    R$ 100.000,00. Após 3 minutos de execução, verifique a quantidade de transações que foram executadas e se o valor total no cofre continua sendo R$
    100.000,00.
 
-1. Reescreva o exercício 3
-   usando [Executors](https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/util/concurrent/package-summary.html#executors-heading).
-   Faça os testes com 10 e 100 _Threads_ usando os _Executors_ abaixo listados. Explique o funcionamento de cada
-   _Executor_ e o motivo da diferença nos tempos recebidos.
-    - _ThreadPerTaskExecutor_
-    - _VirtualThreadPerTaskExecutor_
-    - _CachedThreadPool_
-    - _WorkStealingPool_
-
 1. Em uma cozinha, existe uma pilha de 100 pratos sujos. Para tal, temos uma pessoa lavando pratos e duas secando os
    pratos. Entre eles, existe um escorredor com espaço para apenas 10 pratos. Faça um programa que simule a lavação dos
    100 pratos sujos, sua colocação no escorredor e a secagem destes. Após enxugar cada prato, ele será colocado na pilha
    de pratos limpos.
-
-1. Descubra qual a quantidade de _Threads_ que o seu sistema consegue criar. Para isso, fique criando _Threads_ de
-   plataforma e "estacione" elas com o método _park ()_ da classe _LockSupport_.
 
 1. Observe o programa a seguir, e diga o motivo do valor de saída no console às vezes não ser 2000. Qual seria a
    correção?
