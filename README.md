@@ -634,42 +634,37 @@
 1. Observe o programa a seguir, e diga o motivo do valor de saída no console às vezes não ser 2000. Qual seria a
    correção?
 
-```java
-    public class Exercicio09 {
-        private int count = 0;
+```go
+package main
 
-        public void increment() {
-            count++;
-        }
+import (
+   "fmt"
+   "sync"
+)
 
-        public int getCount() {
-            return count;
-        }
+var count int32
 
-        static void main() throws Exception {
-            Exercicio09 contador = new Exercicio09();
-   
-            Thread t1 = new Thread(() -> {
-                for (int i = 0; i < 1000; i++) {
-                   contador.increment();
-                }
-            });
+func increment() {
+   for range 1000 {
+      count++
+   }
+}
 
-            Thread t2 = new Thread(() -> {
-                for (int i = 0; i < 1000; i++) {
-                    contador.increment();
-                }
-            });
+func getCount() int32 {
+   return count
+}
 
-            t1.start();
-            t2.start();
-
-            t1.join();
-            t2.join();
-
-            System.out.println(contador.getCount());
-       }
-    }
+func main() {
+   var wg sync.WaitGroup
+   wg.Go(func() {
+      increment()
+   })
+   wg.Go(func() {
+      increment()
+   })
+   wg.Wait()
+   fmt.Println(getCount())
+}
 ```
 
 ## NoSQL Chave-Valor
@@ -693,18 +688,24 @@
 
 1. Crie a classe Pessoa, com os atributos mais comuns (id, nome, telefone, etc), e após isto crie uma classe PessoaDAO
    que implemente as operações básicas de C.R.U.D.[^2] para fazerem a persistência dos objetos na base chave-valor
-   usando o tipo `Hash`de dados. A chave da coleção _hash_ será "contatos:" mais o id da pessoa. Ex: `contatos:1`,
+   usando o tipo _Hash_ de dados. A chave da coleção _hash_ será "contatos1:" mais o id da pessoa. Ex: `contatos:1`,
    `contatos:2`
 
 1. Crie a classe Pessoa, com os atributos mais comuns (id, nome, telefone, etc), e após isto crie uma classe PessoaDAO
    que implemente as operações básicas de C.R.U.D.[^2] para fazerem a persistência dos objetos na base chave-valor
    usando do mecanismo de serialização do Java&trade;. Neste exercício será usada a mesma estratégia de chaves do
-   exercício anterior, ou seja, chave "contatos:" + o id da pessoa.
+   exercício anterior, ou seja, chave "contatos2:" + o id da pessoa.
 
 1. Crie a classe Pessoa, com os atributos mais comuns (id, nome, telefone, etc), e após isto crie uma classe PessoaDAO
    que implemente as operações básicas de C.R.U.D.[^2] para fazerem a persistência dos objetos na base chave-valor
    usando do mecanismo de serialização do Java&trade;. Neste exercício será usado uma entrada _Hash_ somente. Cada valor
    interno do _Hash_ terá o id da pessoa como chave e a objeto serializado como valor.
+
+1. Crie a classe Pessoa, com os atributos mais comuns (id, nome, telefone, etc), e após isto crie uma classe PessoaDAO
+   que implemente as operações básicas de C.R.U.D.[^2] para fazerem a persistência dos objetos na base chave-valor
+   usando o tipo de dados JSON[^4] através da biblioteca [GSON](https://github.com/google/gson) já incluida na
+   biblioteca [Jedis (https://github.com/redis/jedis).
+   Neste exercício será usada a mesma estratégia de chaves do exercício 8, ou seja, chave "contatos4:" + o id da pessoa.
 
 1. Faça um programa que fique publicando (`Publish`) a cada 20 segundos um número aleatório no tópico
    `codigo:seguranca`. Faça um segundo programa que assine (`Subscribe`) a este mesmo tópico e que exiba os valores que
@@ -788,3 +789,5 @@ processam o mesmo problema.
 [^2]: C.R.U.D. são as operações _Create_, _Read_, _Update_ e _Delete_
 
 [^3]: BSON Binary JSON
+
+[^4]: JSON JavaScript Object Notation
