@@ -14,10 +14,6 @@ func increment() {
 	}
 }
 
-func getCount() int32 {
-	return count
-}
-
 func main() {
 	var wg sync.WaitGroup
 	wg.Go(func() {
@@ -27,5 +23,5 @@ func main() {
 		increment()
 	})
 	wg.Wait()
-	fmt.Println(getCount())
+	fmt.Println(count)
 }
