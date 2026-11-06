@@ -21,7 +21,7 @@ func NewPessoaDAOImpl() *PessoaDAOImpl {
 }
 
 func (dao *PessoaDAOImpl) Create(p Pessoa) error {
-	key := "contatos:" + p.ID
+	key := "contatos1:" + p.ID
 
 	values := map[string]any{
 		"id":       p.ID,
@@ -34,7 +34,7 @@ func (dao *PessoaDAOImpl) Create(p Pessoa) error {
 }
 
 func (dao *PessoaDAOImpl) Read(id string) (Pessoa, error) {
-	key := "contatos:" + id
+	key := "contatos1:" + id
 
 	data, err := dao.client.HGetAll(dao.ctx, key).Result()
 	if err != nil {
