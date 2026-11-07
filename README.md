@@ -692,10 +692,6 @@ func main() {
    usando o tipo de dados JSON[^4].
    Neste exercício será usada a mesma estratégia de chaves do exercício 7, ou seja, chave "contatos2:" + o id da pessoa.
 
-1. Faça um programa que fique publicando (`Publish`) a cada 20 segundos um número aleatório no tópico
-   `codigo:seguranca`. Faça um segundo programa que assine (`Subscribe`) a este mesmo tópico e que exiba os valores que
-   vem sendo publicados.
-
 ## NoSQL Documento
 
 1. Importe as bases de dados de exemplo

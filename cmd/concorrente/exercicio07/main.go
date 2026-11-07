@@ -6,11 +6,11 @@ import (
 	"sync/atomic"
 )
 
-var count int32
+var count atomic.Int32
 
 func increment() {
 	for range 1000 {
-		atomic.AddInt32(&count, 1)
+		count.Add(1)
 	}
 }
 
