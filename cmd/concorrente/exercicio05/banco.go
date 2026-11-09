@@ -18,10 +18,7 @@ func NewBanco(qtdeContas int, saldoInicial float64) *banco {
 	b.transacoes.Store(0)
 	b.contas = make([]*conta, qtdeContas)
 	for i := range qtdeContas {
-		b.contas[i] = &conta{
-			id:    i,
-			saldo: saldoInicial,
-		}
+		b.contas[i] = NewConta(i, saldoInicial)
 	}
 	return b
 }

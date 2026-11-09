@@ -8,6 +8,13 @@ type conta struct {
 	lock  sync.Mutex
 }
 
+func NewConta(id int, saldoInicial float64) *conta {
+	return &conta{
+		id:    id,
+		saldo: saldoInicial,
+	}
+}
+
 func (c *conta) Deposito(valor float64) {
 	c.saldo += valor
 }
