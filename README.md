@@ -14,8 +14,9 @@
 1. [Programação concorrente](#programação-concorrente)
 1. [NoSQL Chave-Valor](#nosql-chave-valor)
 1. [NoSQL Documento](#nosql-documento)
-    1. [ODM](#nosql-documento-odm)
 1. [Informações legais](#informações-legais)
+
+[Versão destes exercícios em Java](https://github.com/glaucioscheibel/exerciciosJava)
 
 ## Estrutura sequencial
 
@@ -262,7 +263,7 @@
    pensando. A cada _chute_ que o programa der, o usuário deverá responder se ele acertou, se o valor foi acima ou
    abaixo do pensado. Caso o programa acerte em até 10 tentativas, o programa será considerado vitorioso.
 
-1. O seguinte programa em Go&trade; não está funcionando e lhe foi pedido para ser corrigido. Apenas olhando o
+1. O seguinte programa em Go não está funcionando e lhe foi pedido para ser corrigido. Apenas olhando o
    código, qual foi o erro de programação?
 
    ```go
@@ -665,8 +666,8 @@ func main() {
 
 ## NoSQL Chave-Valor
 
-1. Faça um programa que conecte numa base [Redis&reg;](https://redis.io/) e chame as funções `Ping` e `Echo`. Utilize a
-   linguagem [Java&trade;](https://www.java.com/) com a biblioteca [Jedis](https://github.com/redis/jedis).
+1. Faça um programa que conecte numa base [Redis](https://redis.io/) e chame as funções `Ping` e `Echo`. Utilize a
+   linguagem [Go](https://go.dev/) com a biblioteca [go-redis](https://github.com/redis/go-redis).
 
 1. Crie 10 entradas chave-valor aleatórios e em seguida acesse o banco Redis com algum programa GUI
    ([RedisInsight](https://redis.io/insight/), [Another Redis Desktop Manager](https://goanother.com/)
@@ -694,24 +695,8 @@ func main() {
 
 ## NoSQL Documento
 
-1. Importe as bases de dados de exemplo
-   do [airbnb](src/main/resources/mongodb/airbnb/), [mflix](src/main/resources/mongodb/mflix/)
-   e [weather](src/main/resources/mongodb/weather/) e responda as seguintes perguntas sobre cada uma delas:
-    1. Quantas coleções existem?
-    1. Qual o tipo de dado usado para Id?
-    1. Quais tipos de dados foram usados pelos campos no primeiro nível de cada documento?
-    1. São aproximadamente quantos campos por documento?
-    1. Existe "relacionamento" entre os documentos?
-    1. Caso fosse usado um banco relacional, como ficaria o Modelo Entidade-Relacionamento.
-    1. Existem dados geoespaciais? Se sim, como são armazenados?
-    1. Cite vantagens e desvantagens do uso do modelo documento neste caso.
-
-   > Dica: Use o comando `mongoimport --db=<nomedabase> <arquivo.json>`
-   do [MongoDB&reg; Database Tools](https://www.mongodb.com/try/download/database-tools)
-
-1. Com a base de dados do [mflix](src/main/resources/mongodb/mflix/) e faça os seguintes programas com a
-   linguagem [Java&trade;](https://www.java.com/) e a
-   biblioteca [MongoDB&reg; Synchronous Driver](https://www.mongodb.com/pt-br/docs/drivers/java/sync/current/):
+1. Com a base de dados do [mflix](https://github.com/glaucioscheibel/exerciciosJava/blob/master/src/main/resources/mongodb/mflix)
+e faça os seguintes programas com a linguagem [Go](https://go.dev/) e a biblioteca [MongoDB Go Driver](https://www.mongodb.com/docs/drivers/go/current/):
     1. Liste os filmes com o nome "_The Room_".
     1. Liste os filmes que possuam uma duração ("_runtime_") menor ou igual à 15 minutos.
     1. Liste os filmes produzidos nos anos 1980s ordenados do maior ao menor valor no campo "_imdb.rating_".
@@ -724,37 +709,6 @@ func main() {
 1. Crie a classe Pessoa, com os atributos mais comuns (id, nome, telefone, etc) e com pelo menos 1 atributo composto
    (endereço contento rua, bairro, cep, tipo), e após isto crie uma classe PessoaDAO que implemente as operações básicas
    de C.R.U.D.[^2] para fazerem a persistência dos objetos na base documento usando o formato BSON[^3].
-
-### NoSQL Documento ODM
-
-1. Com o uso da biblioteca [Morphia](https://morphia.dev/), vamos criar uma aplicação C.R.U.D[^2]:
-    1. Crie classes de modelo com a seguinte estrutura e com as anotações do _Morphia_:
-        - Livro:
-            - id
-            - titulo
-            - autor (_Referenced_)
-            - ano
-        - Autor
-            - id
-            - nome
-            - livros (_Referenced_)
-            - endereços (_Embedded_)
-        - Endereço
-            - rua
-            - complemento
-            - bairro
-            - cep
-            - tipo
-
-       > Obs: A entidade Autor deverá possuir um índice único por nome e a entidade livro deverá possuir um índice único
-       por título.
-
-    1. Crie o livro [O Corvo](https://pt.wikipedia.org/wiki/O_Corvo) e o armazene na base do MongoDB&reg; e após isto
-       crie os dados do autor Edgar Allan Poe, do seu endereço residencial, e do livro e o armazene.
-    1. Busque o autor _Edgar Allan Poe_ e apresente todos os seus dados (endereços e livros).
-    1. Adicione mais 2 livros escritos por este autor.
-    1. Altere o nome do livro _O Corvo_ para _O Corvo e outros contos extraordinários_ através do comando
-       `query update`.
 
 ## Informações legais
 
