@@ -21,17 +21,14 @@ func main() {
 	cursor, _ := collection.Find(
 		ctx,
 		bson.D{
-			bson.E{
-				Key: "$and",
-				Value: bson.A{
-					bson.D{bson.E{Key: "year", Value: bson.D{bson.E{Key: "$gte", Value: 1980}}}},
-					bson.D{bson.E{Key: "year", Value: bson.D{bson.E{Key: "$lt", Value: 1990}}}},
-				},
-			},
+			{"$and", bson.A{
+				bson.D{{"year", bson.D{{"$gte", 1980}}}},
+				bson.D{{"year", bson.D{{"$lt", 1990}}}},
+			}},
 		},
 		options.Find().SetSort(
 			bson.D{
-				bson.E{Key: "imdb.rating", Value: -1},
+				{"imdb.rating", -1},
 			},
 		),
 	)
