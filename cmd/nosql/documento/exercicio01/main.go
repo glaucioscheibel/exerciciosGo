@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 
 	"go.mongodb.org/mongo-driver/v2/bson"
@@ -23,7 +24,8 @@ func main() {
 	for cursor.Next(ctx) {
 		var doc bson.M
 		cursor.Decode(&doc)
-		fmt.Printf("Achei: %s\n\n", doc)
+		jsonBytes, _ := json.MarshalIndent(doc, "", "  ")
+		fmt.Printf("Achei: %s\n\n", string(jsonBytes))
 	}
 	cursor.Close(ctx)
 	client.Disconnect(ctx)
