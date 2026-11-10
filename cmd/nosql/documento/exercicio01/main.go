@@ -23,7 +23,7 @@ func main() {
 	for cursor.Next(ctx) {
 		var doc bson.M
 		cursor.Decode(&doc)
-		fmt.Println(doc)
+		fmt.Printf("Achei: %s\n\n", doc)
 	}
 	cursor.Close(ctx)
 	client.Disconnect(ctx)
