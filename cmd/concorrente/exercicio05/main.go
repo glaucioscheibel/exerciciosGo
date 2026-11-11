@@ -7,8 +7,8 @@ import (
 )
 
 func movimento(b *banco, tempo time.Duration) {
-	ini := time.Now().UnixMilli()
-	for time.Now().UnixMilli()-ini < tempo.Milliseconds() {
+	ini := time.Now()
+	for time.Since(ini) < tempo {
 		contaDebito := rand.Intn(100)
 		contaCredito := rand.Intn(100)
 		valor := rand.Float64() * 2500.0
@@ -17,8 +17,8 @@ func movimento(b *banco, tempo time.Duration) {
 }
 
 func balanco(b *banco, tempo time.Duration) {
-	ini := time.Now().UnixMilli()
-	for time.Now().UnixMilli()-ini < tempo.Milliseconds() {
+	ini := time.Now()
+	for time.Since(ini) < tempo {
 		b.ImprimeSaldos()
 		time.Sleep(5 * time.Second)
 	}
