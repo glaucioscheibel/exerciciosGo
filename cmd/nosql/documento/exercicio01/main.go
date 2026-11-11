@@ -25,7 +25,7 @@ func main() {
 		var doc bson.M
 		cursor.Decode(&doc)
 		jsonBytes, _ := json.MarshalIndent(doc, "", "  ")
-		fmt.Printf("Achei: %s\n\n", string(jsonBytes))
+		fmt.Printf("Movie: %s\n\n", string(jsonBytes))
 	}
 	cursor.Close(ctx)
 	client.Disconnect(ctx)
