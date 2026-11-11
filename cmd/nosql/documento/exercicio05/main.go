@@ -31,7 +31,8 @@ func main() {
 					"title":       1,
 					"awards.wins": 1,
 					"_id":         0,
-				}).
+				},
+			).
 			SetSort(
 				bson.M{
 					"title": 1,

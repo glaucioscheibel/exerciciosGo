@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func soma(numeros []int16, ini int, qtde int, result chan int64) {
+func soma(numeros []int16, ini, qtde int, result chan int64) {
 	var total int64
 	for i := ini; i < ini+qtde; i++ {
 		total += int64(numeros[i])

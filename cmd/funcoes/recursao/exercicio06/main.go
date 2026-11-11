@@ -4,7 +4,7 @@ import "fmt"
 
 var movimento int
 
-func hanoi(quantidade int, origem string, destino string, aux string) {
+func hanoi(quantidade int, origem, destino, aux string) {
 	if quantidade >= 1 {
 		hanoi(quantidade-1, origem, aux, destino)
 		movimento++

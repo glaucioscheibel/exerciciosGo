@@ -23,7 +23,7 @@ func NewBanco(qtdeContas int, saldoInicial float64) *banco {
 	return b
 }
 
-func (b *banco) Transferencia(contaDebito int, contaCredito int, valor float64) {
+func (b *banco) Transferencia(contaDebito, contaCredito int, valor float64) {
 	if contaDebito == contaCredito {
 		return
 	}
