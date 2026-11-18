@@ -12,6 +12,6 @@ func fatorial(numero int) int {
 func main() {
 	var numero int
 	fmt.Print("Número: ")
-	fmt.Scan(&numero)
+	_, _ = fmt.Scan(&numero)
 	fmt.Printf("Fatorial: %d\n", fatorial(numero))
 }

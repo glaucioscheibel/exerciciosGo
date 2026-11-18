@@ -23,5 +23,5 @@ func main() {
 		increment()
 	})
 	wg.Wait()
-	fmt.Println(count)
+	fmt.Println(&count)
 }

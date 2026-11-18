@@ -9,7 +9,7 @@ func ehBissexto(ano int) bool {
 func main() {
 	var ano int
 	fmt.Print("Ano: ")
-	fmt.Scan(&ano)
+	_, _ = fmt.Scan(&ano)
 	var msg string
 	if ehBissexto(ano) {
 		msg = " "

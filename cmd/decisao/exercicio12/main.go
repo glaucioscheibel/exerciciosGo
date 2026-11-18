@@ -11,10 +11,10 @@ func main() {
 	const alcool = 2.9
 	const gasolina = 3.3
 	fmt.Print("A-álcool, G-gasolina: ")
-	fmt.Scan(&tipo)
+	_, _ = fmt.Scan(&tipo)
 	tipo = string(tipo[0])
 	fmt.Print("Litros: ")
-	fmt.Scan(&litros)
+	_, _ = fmt.Scan(&litros)
 	if tipo == "A" {
 		var desconto float64
 		if litros <= 20 {

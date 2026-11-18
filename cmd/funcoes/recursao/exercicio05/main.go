@@ -16,6 +16,6 @@ func inverte(palavra string) string {
 func main() {
 	var palavra string
 	fmt.Print("Palavra: ")
-	fmt.Scan(&palavra)
+	_, _ = fmt.Scan(&palavra)
 	fmt.Printf("O inverso de %s é %s\n", palavra, inverte(palavra))
 }

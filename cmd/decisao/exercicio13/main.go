@@ -7,9 +7,9 @@ func main() {
 	var macas float64
 	var preco float64 = 0
 	fmt.Print("Quantidade de morangos: ")
-	fmt.Scan(&morango)
+	_, _ = fmt.Scan(&morango)
 	fmt.Print("Quantidade de maçãs: ")
-	fmt.Scan(&macas)
+	_, _ = fmt.Scan(&macas)
 	if morango > 5 {
 		preco += morango * 2.2
 	} else {

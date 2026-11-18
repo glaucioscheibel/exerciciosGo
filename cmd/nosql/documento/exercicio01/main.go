@@ -23,10 +23,10 @@ func main() {
 
 	for cursor.Next(ctx) {
 		var doc bson.M
-		cursor.Decode(&doc)
+		_ = cursor.Decode(&doc)
 		jsonBytes, _ := json.MarshalIndent(doc, "", "  ")
 		fmt.Printf("Movie: %s\n\n", string(jsonBytes))
 	}
-	cursor.Close(ctx)
-	client.Disconnect(ctx)
+	_ = cursor.Close(ctx)
+	_ = client.Disconnect(ctx)
 }

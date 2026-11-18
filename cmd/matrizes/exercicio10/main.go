@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var ordem int
 	fmt.Print("Ordem do triângulo de Pascal: ")
-	fmt.Scan(&ordem)
+	_, _ = fmt.Scan(&ordem)
 	pascal := make([][]int, ordem)
 	for i := 0; i < ordem; i++ {
 		pascal[i] = make([]int, i+1)

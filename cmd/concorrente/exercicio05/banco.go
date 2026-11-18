@@ -7,14 +7,14 @@ import (
 	"golang.org/x/text/message"
 )
 
-type banco struct {
+type Banco struct {
 	contas            []*conta
 	transacoes        atomic.Int64
 	transacoesDoSaldo int64
 }
 
-func NewBanco(qtdeContas int, saldoInicial float64) *banco {
-	b := &banco{}
+func NewBanco(qtdeContas int, saldoInicial float64) *Banco {
+	b := &Banco{}
 	b.transacoes.Store(0)
 	b.contas = make([]*conta, qtdeContas)
 	for i := range qtdeContas {
@@ -23,7 +23,7 @@ func NewBanco(qtdeContas int, saldoInicial float64) *banco {
 	return b
 }
 
-func (b *banco) Transferencia(contaDebito, contaCredito int, valor float64) {
+func (b *Banco) Transferencia(contaDebito, contaCredito int, valor float64) {
 	if contaDebito == contaCredito {
 		return
 	}
@@ -38,7 +38,7 @@ func (b *banco) Transferencia(contaDebito, contaCredito int, valor float64) {
 	b.transacoes.Add(1)
 }
 
-func (b *banco) getSaldoTotal() float64 {
+func (b *Banco) getSaldoTotal() float64 {
 	var total float64
 	for _, conta := range b.contas {
 		conta.Lock()
@@ -51,7 +51,7 @@ func (b *banco) getSaldoTotal() float64 {
 	return total
 }
 
-func (b *banco) ImprimeSaldos() {
+func (b *Banco) ImprimeSaldos() {
 	p := message.NewPrinter(language.BrazilianPortuguese)
-	p.Printf("Saldo do banco: %.2f Transações: %.d\n", b.getSaldoTotal(), b.transacoesDoSaldo)
+	_, _ = p.Printf("Saldo do banco: %.2f Transações: %.d\n", b.getSaldoTotal(), b.transacoesDoSaldo)
 }

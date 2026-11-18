@@ -7,9 +7,9 @@ func main() {
 	var vendas float64
 	var comissao float64
 	fmt.Print("Nome do corretor: ")
-	fmt.Scan(&nome)
+	_, _ = fmt.Scan(&nome)
 	fmt.Print("Valor das vendas: ")
-	fmt.Scan(&vendas)
+	_, _ = fmt.Scan(&vendas)
 	if vendas > 50_000 {
 		comissao = vendas * 0.12
 	} else if vendas >= 30_000 {

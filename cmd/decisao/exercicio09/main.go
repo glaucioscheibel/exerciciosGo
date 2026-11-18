@@ -6,7 +6,7 @@ func main() {
 	const salarioMinimo = 1412.0
 	var salario float64
 	fmt.Print("Salário atual: ")
-	fmt.Scan(&salario)
+	_, _ = fmt.Scan(&salario)
 	if salario < salarioMinimo*3 {
 		salario *= 1.5
 	} else if salario < salarioMinimo*10 {

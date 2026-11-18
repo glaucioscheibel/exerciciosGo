@@ -6,19 +6,17 @@ import (
 )
 
 func main() {
-	var a int
-	var b int
-	var c int
+	var a, b, c int
 	var delta float64
 	fmt.Print("A: ")
-	fmt.Scan(&a)
+	_, _ = fmt.Scan(&a)
 	if a == 0 {
 		fmt.Println("A equação não é do segundo grau")
 	} else {
 		fmt.Print("B: ")
-		fmt.Scan(&b)
+		_, _ = fmt.Scan(&b)
 		fmt.Print("C: ")
-		fmt.Scan(&c)
+		_, _ = fmt.Scan(&c)
 		delta = math.Pow(float64(b), 2) - float64(4*a*c)
 		if delta < 0 {
 			fmt.Println("A equação não possui raízes reais")

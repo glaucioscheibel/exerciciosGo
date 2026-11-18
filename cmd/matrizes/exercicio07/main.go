@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var ordem int
 	fmt.Print("Ordem da matriz identidade: ")
-	fmt.Scan(&ordem)
+	_, _ = fmt.Scan(&ordem)
 	id := make([][]int, ordem)
 	for i := range id {
 		id[i] = make([]int, ordem)

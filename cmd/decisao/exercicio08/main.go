@@ -3,16 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var ladoA int
-	var ladoB int
-	var ladoC int
+	var ladoA, ladoB, ladoC int
 	var msg string
 	fmt.Print("Lado A: ")
-	fmt.Scan(&ladoA)
+	_, _ = fmt.Scan(&ladoA)
 	fmt.Print("Lado B: ")
-	fmt.Scan(&ladoB)
+	_, _ = fmt.Scan(&ladoB)
 	fmt.Print("Lado C: ")
-	fmt.Scan(&ladoC)
+	_, _ = fmt.Scan(&ladoC)
 	if ladoA < ladoB+ladoC && ladoB < ladoA+ladoC && ladoC < ladoA+ladoB {
 		if ladoA == ladoB && ladoB == ladoC {
 			msg = "Triângulo equilátero"

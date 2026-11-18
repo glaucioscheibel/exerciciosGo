@@ -8,11 +8,11 @@ func main() {
 	resultado := 0
 	var operacao string
 	fmt.Print("Valor1: ")
-	fmt.Scan(&val1)
+	_, _ = fmt.Scan(&val1)
 	fmt.Print("Valor2: ")
-	fmt.Scan(&val2)
+	_, _ = fmt.Scan(&val2)
 	fmt.Print("Operação: ")
-	fmt.Scan(&operacao)
+	_, _ = fmt.Scan(&operacao)
 	operacao = string(operacao[0])
 	switch operacao {
 	case "+":

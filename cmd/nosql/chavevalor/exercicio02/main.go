@@ -15,7 +15,6 @@ func main() {
 		panic(err)
 	}
 	client := redis.NewClient(opt)
-	defer client.Close()
 	for i := range 10 {
 		client.Set(ctx, "chave"+strconv.Itoa(i), i, 0)
 	}
@@ -24,4 +23,5 @@ func main() {
 		valor, _ := client.Get(ctx, chave).Result()
 		fmt.Printf("%s = %s\n", chave, valor)
 	}
+	_ = client.Close()
 }

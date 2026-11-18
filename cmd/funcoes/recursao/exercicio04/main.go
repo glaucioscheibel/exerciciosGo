@@ -22,7 +22,7 @@ func fibCalc(n int) int {
 func main() {
 	var n int
 	fmt.Print("N: ")
-	fmt.Scan(&n)
+	_, _ = fmt.Scan(&n)
 	fib, err := fibonacci(n)
 	if err != nil {
 		fmt.Printf(err.Error())

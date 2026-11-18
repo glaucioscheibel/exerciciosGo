@@ -12,9 +12,9 @@ func ehPrefixo(palavra, prefixo string) bool {
 func main() {
 	var palavra, prefixo string
 	fmt.Print("Palavra: ")
-	fmt.Scan(&palavra)
+	_, _ = fmt.Scan(&palavra)
 	fmt.Print("Prefixo: ")
-	fmt.Scan(&prefixo)
+	_, _ = fmt.Scan(&prefixo)
 	var msg string
 	if !ehPrefixo(palavra, prefixo) {
 		msg = " não"

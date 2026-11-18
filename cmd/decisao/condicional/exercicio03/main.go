@@ -9,9 +9,9 @@ func main() {
 	var valorAPagar float64
 	var tipo int
 	fmt.Print("Valor da compra: ")
-	fmt.Scan(&valor)
+	_, _ = fmt.Scan(&valor)
 	fmt.Print("Tipo de pessoa: ")
-	fmt.Scan(&tipo)
+	_, _ = fmt.Scan(&tipo)
 	switch tipo {
 	case 1:
 		valorAPagar = valor

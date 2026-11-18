@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func movimento(b *banco, tempo time.Duration) {
+func movimento(b *Banco, tempo time.Duration) {
 	ini := time.Now()
 	for time.Since(ini) < tempo {
 		contaDebito := rand.Intn(100)
@@ -16,7 +16,7 @@ func movimento(b *banco, tempo time.Duration) {
 	}
 }
 
-func balanco(b *banco, tempo time.Duration) {
+func balanco(b *Banco, tempo time.Duration) {
 	ini := time.Now()
 	for time.Since(ini) < tempo {
 		b.ImprimeSaldos()

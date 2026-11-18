@@ -12,8 +12,8 @@ func mdc(x, y int) int {
 func main() {
 	var x, y int
 	fmt.Print("X: ")
-	fmt.Scan(&x)
+	_, _ = fmt.Scan(&x)
 	fmt.Print("Y: ")
-	fmt.Scan(&y)
+	_, _ = fmt.Scan(&y)
 	fmt.Printf("O máximo divisor comum de %d e %d é %d\n", x, y, mdc(x, y))
 }

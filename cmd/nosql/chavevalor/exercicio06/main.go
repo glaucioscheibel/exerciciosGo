@@ -11,7 +11,6 @@ func main() {
 	opt, _ := redis.ParseURL("redis://localhost:6379")
 	ctx := context.Background()
 	client := redis.NewClient(opt)
-	defer client.Close()
 	nomes := []redis.Z{
 		{Score: 1, Member: "Adalberto"},
 		{Score: 2, Member: "Bianca"},
@@ -29,4 +28,5 @@ func main() {
 	values, _ := client.ZRange(ctx, "nomes3", 0, tam-1).Result()
 	fmt.Printf("Tamanho da lista: %d\n", tam)
 	fmt.Printf("Usuários na lista: %v\n", values)
+	_ = client.Close()
 }

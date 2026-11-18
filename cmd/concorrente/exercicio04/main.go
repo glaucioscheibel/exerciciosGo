@@ -14,7 +14,7 @@ type safeList struct {
 }
 
 func insere(lista *safeList) {
-	for true {
+	for {
 		lista.mu.Lock()
 		lista.lista = append(lista.lista, rand.Intn(100))
 		lista.mu.Unlock()
@@ -22,7 +22,7 @@ func insere(lista *safeList) {
 }
 
 func remove(lista *safeList) {
-	for true {
+	for {
 		lista.mu.Lock()
 		if len(lista.lista) > 0 {
 			lista.lista = slices.Delete(lista.lista, 0, 1)
@@ -32,7 +32,7 @@ func remove(lista *safeList) {
 }
 
 func imprime(lista *safeList) {
-	for true {
+	for {
 		lista.mu.Lock()
 		fmt.Println("Lista atual:", lista.lista)
 		lista.mu.Unlock()

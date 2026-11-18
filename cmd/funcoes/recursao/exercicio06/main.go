@@ -16,6 +16,6 @@ func hanoi(quantidade int, origem, destino, aux string) {
 func main() {
 	var quantidade int
 	fmt.Print("Informe a quantidade de discos: ")
-	fmt.Scan(&quantidade)
+	_, _ = fmt.Scan(&quantidade)
 	hanoi(quantidade, "A", "B", "C")
 }

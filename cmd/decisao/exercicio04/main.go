@@ -7,11 +7,11 @@ func main() {
 	var salario float64
 	var parcelas int
 	fmt.Print("Valor do empréstimo: ")
-	fmt.Scan(&valor)
+	_, _ = fmt.Scan(&valor)
 	fmt.Print("Quantidade de parcelas: ")
-	fmt.Scan(&parcelas)
+	_, _ = fmt.Scan(&parcelas)
 	fmt.Print("Salário: ")
-	fmt.Scan(&salario)
+	_, _ = fmt.Scan(&salario)
 	valorParcela := valor / float64(parcelas)
 	if valorParcela >= salario*0.3 {
 		fmt.Println("Empréstimo não aprovado.")

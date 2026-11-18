@@ -21,10 +21,10 @@ func tipoTriangulo(ladoA, ladoB, ladoC int) string {
 func main() {
 	var ladoA, ladoB, ladoC int
 	fmt.Print("Lado A: ")
-	fmt.Scan(&ladoA)
+	_, _ = fmt.Scan(&ladoA)
 	fmt.Print("Lado B: ")
-	fmt.Scan(&ladoB)
+	_, _ = fmt.Scan(&ladoB)
 	fmt.Print("Lado C: ")
-	fmt.Scan(&ladoC)
+	_, _ = fmt.Scan(&ladoC)
 	fmt.Println(tipoTriangulo(ladoA, ladoB, ladoC))
 }

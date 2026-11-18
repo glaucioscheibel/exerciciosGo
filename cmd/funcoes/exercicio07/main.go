@@ -17,7 +17,7 @@ func ehPrimo(numero int) bool {
 func main() {
 	var numero int
 	fmt.Print("Número: ")
-	fmt.Scan(&numero)
+	_, _ = fmt.Scan(&numero)
 	var msg string
 	if !ehPrimo(numero) {
 		msg = "não "

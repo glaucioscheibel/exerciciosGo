@@ -2,35 +2,35 @@ package main
 
 import "sync"
 
-type conta struct {
+type Conta struct {
 	id    int
 	saldo float64
 	lock  sync.Mutex
 }
 
-func NewConta(id int, saldoInicial float64) *conta {
-	return &conta{
+func NewConta(id int, saldoInicial float64) *Conta {
+	return &Conta{
 		id:    id,
 		saldo: saldoInicial,
 	}
 }
 
-func (c *conta) Deposito(valor float64) {
+func (c *Conta) Deposito(valor float64) {
 	c.saldo += valor
 }
 
-func (c *conta) Saque(valor float64) {
+func (c *Conta) Saque(valor float64) {
 	c.saldo -= valor
 }
 
-func (c *conta) Saldo() float64 {
+func (c *Conta) Saldo() float64 {
 	return c.saldo
 }
 
-func (c *conta) Lock() {
+func (c *Conta) Lock() {
 	c.lock.Lock()
 }
 
-func (c *conta) Unlock() {
+func (c *Conta) Unlock() {
 	c.lock.Unlock()
 }

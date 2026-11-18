@@ -6,7 +6,7 @@ func main() {
 	var qtdeMacas int
 	var valor float64
 	fmt.Print("Quantidade de maçãs: ")
-	fmt.Scan(&qtdeMacas)
+	_, _ = fmt.Scan(&qtdeMacas)
 	if qtdeMacas < 12 {
 		valor = float64(qtdeMacas) * 1.3
 	} else {

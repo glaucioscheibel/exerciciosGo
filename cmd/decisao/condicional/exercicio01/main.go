@@ -7,7 +7,7 @@ import (
 func main() {
 	var estadoCivil string
 	fmt.Print("Inicial do estado civil: ")
-	fmt.Scan(&estadoCivil)
+	_, _ = fmt.Scan(&estadoCivil)
 	estadoCivil = string(estadoCivil[0])
 	switch estadoCivil {
 	case "S":
