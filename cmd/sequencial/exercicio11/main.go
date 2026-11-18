@@ -6,15 +6,13 @@ import (
 )
 
 func main() {
-	var potencia float64
-	var largura float64
-	var comprimento float64
+	var potencia, largura, comprimento float64
 	fmt.Print("Potencia da lâmpada: ")
-	fmt.Scan(&potencia)
+	_, _ = fmt.Scan(&potencia)
 	fmt.Print("Largura do cômodo: ")
-	fmt.Scan(&largura)
+	_, _ = fmt.Scan(&largura)
 	fmt.Print("Comprimento do cômodo: ")
-	fmt.Scan(&comprimento)
+	_, _ = fmt.Scan(&comprimento)
 	quantidade := int(math.Ceil(largura * comprimento * 18 / potencia))
 	fmt.Printf("São necessárias %d lâmpadas.\n", quantidade)
 }

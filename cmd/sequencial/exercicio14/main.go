@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var bruto float64
 	fmt.Print("Salário bruto: ")
-	fmt.Scanf("%f", &bruto)
+	_, _ = fmt.Scanf("%f", &bruto)
 	previdencia := bruto * 0.1
 	ir := (bruto - previdencia) * 0.05
 	liquido := bruto - previdencia - ir

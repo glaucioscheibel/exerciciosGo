@@ -6,13 +6,11 @@ import (
 )
 
 func main() {
-	var base float64
-	var expoente float64
-	var resultado float64
+	var base, expoente float64
 	fmt.Print("Informe base: ")
-	fmt.Scan(&base)
+	_, _ = fmt.Scan(&base)
 	fmt.Print("Informe expoente: ")
-	fmt.Scan(&expoente)
-	resultado = math.Pow(base, expoente)
+	_, _ = fmt.Scan(&expoente)
+	resultado := math.Pow(base, expoente)
 	fmt.Printf("Resultado: %.2f \n", resultado)
 }
