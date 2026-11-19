@@ -8,11 +8,11 @@ func main() {
 	vezes := 0
 	for i := range v1 {
 		fmt.Printf("v1[%d]: ", i)
-		fmt.Scan(&v1[i])
+		_, _ = fmt.Scan(&v1[i])
 	}
 	for i := range v2 {
 		fmt.Printf("v2[%d]: ", i)
-		fmt.Scan(&v2[i])
+		_, _ = fmt.Scan(&v2[i])
 	}
 	for i := range v1 {
 		if v1[i] == v2[i] {

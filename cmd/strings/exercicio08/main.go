@@ -10,7 +10,7 @@ func main() {
 	var palavra string
 	var resultado strings.Builder
 	fmt.Print("Informe uma palavra: ")
-	fmt.Scanln(&palavra)
+	_, _ = fmt.Scanln(&palavra)
 	for _, c := range palavra {
 		if unicode.IsUpper(c) {
 			resultado.WriteRune(unicode.ToLower(c))

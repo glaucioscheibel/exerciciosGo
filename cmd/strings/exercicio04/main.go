@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var digitos string
 	fmt.Print("Informe dígitos: ")
-	fmt.Scanln(&digitos)
+	_, _ = fmt.Scanln(&digitos)
 	primeiro := true
 	for _, c := range digitos {
 		if primeiro {

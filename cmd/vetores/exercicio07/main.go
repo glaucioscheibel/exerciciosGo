@@ -10,7 +10,7 @@ func main() {
 	aux := 0
 	for len(matriculas) < 100 {
 		fmt.Printf("Matrícula: %d: ", len(matriculas))
-		fmt.Scan(&aux)
+		_, _ = fmt.Scan(&aux)
 		if slices.Contains(matriculas, aux) {
 			fmt.Printf("A matrícula %d já existe!\n", aux)
 		} else {

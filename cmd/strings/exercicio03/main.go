@@ -29,7 +29,7 @@ func main() {
 		}
 	}
 	if err := scanner.Err(); err != nil {
-		fmt.Fprintln(os.Stderr, "Erro ao ler entrada:", err)
+		_, _ = fmt.Fprintln(os.Stderr, "Erro ao ler entrada:", err)
 		return
 	}
 	a := int(codigo[0])

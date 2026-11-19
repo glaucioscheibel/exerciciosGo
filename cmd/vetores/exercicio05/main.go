@@ -29,6 +29,6 @@ func main() {
 	fmt.Printf("A: %v\n", a)
 	fmt.Printf("B: %v\n", b)
 	fmt.Printf("União: %v\n", uniao)
-	fmt.Printf("Interseccao: %v\n", interseccao)
+	fmt.Printf("Intersecção: %v\n", interseccao)
 	fmt.Printf("Diferença: %v\n", diferenca)
 }

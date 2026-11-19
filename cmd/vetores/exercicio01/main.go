@@ -6,7 +6,7 @@ func main() {
 	var numeros [100]int
 	for i := range len(numeros) {
 		fmt.Printf("Numero %d: ", i)
-		fmt.Scan(&numeros[i])
+		_, _ = fmt.Scan(&numeros[i])
 	}
 	var maior, menor, soma int
 	for i := range len(numeros) {
