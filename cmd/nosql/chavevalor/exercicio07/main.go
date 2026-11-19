@@ -7,13 +7,13 @@ var dao PessoaDAO = NewPessoaDAOImpl()
 func create() {
 	var pessoa Pessoa
 	fmt.Print("ID: ")
-	fmt.Scanf("%s", &pessoa.ID)
+	_, _ = fmt.Scanf("%s", &pessoa.ID)
 	fmt.Print("Nome: ")
-	fmt.Scanf("%s", &pessoa.Nome)
+	_, _ = fmt.Scanf("%s", &pessoa.Nome)
 	fmt.Print("Telefone: ")
-	fmt.Scanf("%s", &pessoa.Telefone)
+	_, _ = fmt.Scanf("%s", &pessoa.Telefone)
 	fmt.Print("Email: ")
-	fmt.Scanf("%s", &pessoa.Email)
+	_, _ = fmt.Scanf("%s", &pessoa.Email)
 
 	err := dao.Create(pessoa)
 	if err != nil {
@@ -26,7 +26,7 @@ func create() {
 func read() {
 	var id string
 	fmt.Print("ID: ")
-	fmt.Scanf("%s", &id)
+	_, _ = fmt.Scanf("%s", &id)
 
 	pessoa, err := dao.Read(id)
 	if err != nil {
@@ -43,7 +43,7 @@ func update() {
 func del() {
 	var id string
 	fmt.Print("ID: ")
-	fmt.Scanf("%s", &id)
+	_, _ = fmt.Scanf("%s", &id)
 
 	err := dao.Delete(id)
 	if err != nil {
@@ -66,7 +66,7 @@ func main() {
                 `
 		fmt.Println(msg)
 		fmt.Print("Escolha uma opção: ")
-		fmt.Scanf("%d", &opcao)
+		_, _ = fmt.Scanf("%d", &opcao)
 		switch opcao {
 		case 1:
 			create()
