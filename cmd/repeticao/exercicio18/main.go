@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	var cont1, cont2, brancos, nulos, voto int
 	for voto != -1 {
-		fmt.Scan(&voto)
+		_, _ = fmt.Scan(&voto)
 		switch voto {
 		case 1:
 			cont1++

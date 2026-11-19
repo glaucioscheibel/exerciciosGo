@@ -3,13 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	var base int
-	var expoente int
+	var base, expoente int
 	potencia := 1
 	fmt.Print("Base: ")
-	fmt.Scan(&base)
+	_, _ = fmt.Scan(&base)
 	fmt.Print("Expoente: ")
-	fmt.Scan(&expoente)
+	_, _ = fmt.Scan(&expoente)
 	for i := 0; i < expoente; i++ {
 		potencia *= base
 	}

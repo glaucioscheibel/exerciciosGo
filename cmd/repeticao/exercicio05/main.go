@@ -6,13 +6,12 @@ import (
 )
 
 func main() {
-	var a int
-	var b int
+	var a, b int
 	var soma float64 = 0
 	fmt.Print("A: ")
-	fmt.Scan(&a)
+	_, _ = fmt.Scan(&a)
 	fmt.Print("B: ")
-	fmt.Scan(&b)
+	_, _ = fmt.Scan(&b)
 	for i := a; i <= b; i++ {
 		soma += math.Pow(float64(i), 3)
 	}

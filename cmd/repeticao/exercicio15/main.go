@@ -4,15 +4,10 @@ import "fmt"
 
 func main() {
 	var n int = -1
-	var menor int
-	var maior int
-	var pares int
-	var impares int
-	var total int
-	var qtde int
-	for ok := true; ok; ok = (n != 0) {
+	var menor, maior, pares, impares, total, qtde int
+	for ok := true; ok; ok = n != 0 {
 		fmt.Print("Número: ")
-		fmt.Scanf("%d", &n)
+		_, _ = fmt.Scanf("%d", &n)
 		if n != 0 {
 			if qtde == 0 {
 				menor = n

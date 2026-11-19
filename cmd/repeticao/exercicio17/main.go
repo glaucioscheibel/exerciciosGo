@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	fmt.Println("Pense em um número entre 1 e 1000, e tecle enter.")
-	fmt.Scanln()
+	_, _ = fmt.Scanln()
 	inicio := 1
 	fim := 1000
 	acertei := false
@@ -13,7 +13,7 @@ func main() {
 		chute := (inicio + fim) / 2
 		fmt.Printf("O número que você pensou é %d?\n", chute)
 		fmt.Print("S-im, M-aior, N-menor: ")
-		fmt.Scan(&resp)
+		_, _ = fmt.Scan(&resp)
 		switch resp {
 		case "S":
 			acertei = true
