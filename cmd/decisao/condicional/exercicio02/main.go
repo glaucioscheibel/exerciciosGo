@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var val1 int
-	var val2 int
+	var val1, val2 int
 	resultado := 0
 	var operacao string
 	fmt.Print("Valor1: ")

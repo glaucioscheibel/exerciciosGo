@@ -5,8 +5,7 @@ import (
 )
 
 func main() {
-	var valor float64
-	var valorAPagar float64
+	var valor, valorAPagar float64
 	var tipo int
 	fmt.Print("Valor da compra: ")
 	_, _ = fmt.Scan(&valor)

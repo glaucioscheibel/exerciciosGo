@@ -4,8 +4,7 @@ import "fmt"
 
 func main() {
 	var nome string
-	var vendas float64
-	var comissao float64
+	var vendas, comissao float64
 	fmt.Print("Nome do corretor: ")
 	_, _ = fmt.Scan(&nome)
 	fmt.Print("Valor das vendas: ")

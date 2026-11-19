@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var valor float64
-	var salario float64
+	var valor, salario float64
 	var parcelas int
 	fmt.Print("Valor do empréstimo: ")
 	_, _ = fmt.Scan(&valor)

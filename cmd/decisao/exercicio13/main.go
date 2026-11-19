@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var morango float64
-	var macas float64
+	var morango, macas float64
 	var preco float64 = 0
 	fmt.Print("Quantidade de morangos: ")
 	_, _ = fmt.Scan(&morango)
