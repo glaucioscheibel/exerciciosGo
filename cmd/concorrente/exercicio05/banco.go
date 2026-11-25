@@ -8,7 +8,7 @@ import (
 )
 
 type Banco struct {
-	contas            []*conta
+	contas            []*Conta
 	transacoes        atomic.Int64
 	transacoesDoSaldo int64
 }
@@ -16,7 +16,7 @@ type Banco struct {
 func NewBanco(qtdeContas int, saldoInicial float64) *Banco {
 	b := &Banco{}
 	b.transacoes.Store(0)
-	b.contas = make([]*conta, qtdeContas)
+	b.contas = make([]*Conta, qtdeContas)
 	for i := range qtdeContas {
 		b.contas[i] = NewConta(i, saldoInicial)
 	}
